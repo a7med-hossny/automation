@@ -141,7 +141,7 @@ model-viewer {
 /* ======= Responsive ======= */
 @media(max-width:1024px){
   .container { flex-direction: column; padding: 30px; gap:30px; }
-  model-viewer { width: 100%; height: 350px; }
+  model-viewer { width: 100%; height: 350px; order: 2; } /* تحت Inputs */
 }
 
 @media(max-width:768px){
@@ -198,6 +198,7 @@ model-viewer {
 <a href="index.html" class="back-link">Back to Home</a>
 
 <script>
+// ===== Particles Animation =====
 const canvas = document.getElementById('particle-canvas');
 const ctx = canvas.getContext('2d');
 canvas.width = innerWidth;
@@ -246,6 +247,7 @@ function animateParticles(){
 }
 animateParticles();
 
+// ===== Update Button =====
 document.getElementById('update').addEventListener('click', () => {
   const btn = document.getElementById('update');
   btn.classList.add('loading');
